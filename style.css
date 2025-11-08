@@ -4,12 +4,13 @@
   --accent-color: #0077b6; 
   --text-dark: #f1f1f1;
   --bg-light: #0d1b2a; 
-
+}
 body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   background-color: var(--bg-light);
   color: var(--text-dark);
+  
 }
 
 nav a.nav-link.active {
@@ -91,7 +92,7 @@ header#home {
 .hero-text h1 {
   font-size: 5rem;
   font-weight: 700;
-  color: #4cc9f0; /* same as button hover */
+  color: #4cc9f0; 
   text-shadow:
     0 0 10px rgba(76, 201, 240, 0.4),
     0 0 20px rgba(76, 201, 240, 0.4),
@@ -146,9 +147,9 @@ header#home {
 
 .btn-explore {
   display: inline-block;
-  color: var(--main-color); /* navy blue text */
-  background-color: #fff; /* white background */
-  border: 2px solid var(--main-color); /* navy blue border */
+  color: var(--main-color); 
+  background-color: #fff; 
+  border: 2px solid var(--main-color); 
   border-radius: 30px;
   padding: 10px 25px;
   font-weight: 500;
@@ -158,9 +159,9 @@ header#home {
 }
 
 .btn-explore:hover {
-  background-color: #4cc9f0; /* same as CV hover */
+  background-color: #4cc9f0; 
   color: #fff;
-  box-shadow: 0 5px 15px rgba(76, 201, 240, 0.4); /* match CV hover */
+  box-shadow: 0 5px 15px rgba(76, 201, 240, 0.4); 
 }
 
 .profile-container { width: 400px; 
@@ -282,14 +283,14 @@ h2.section-title::after {
 /* Personal Data Grid */
 .personal-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 15px; /* space between boxes */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px; 
   margin-top: 20px;
 }
 
 /* Personal Data Cards */
 .personal-card {
-  background-color: #1b263b; /* match theme */
+  background-color: #1b263b; 
   padding: 20px;
   border-radius: 12px;
   text-align: center;
@@ -300,7 +301,7 @@ h2.section-title::after {
 
 .personal-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(76, 201, 240, 0.5); /* hover shine effect */
+  box-shadow: 0 8px 20px rgba(76, 201, 240, 0.5); 
 }
 
 
@@ -386,11 +387,11 @@ h2.section-title::after {
 }
 
 .project-card img {
-  width: 100%;             /* fill the card width */
-  height: 350px;           /* fixed height, adjust as needed */
-  object-fit: cover;       /* makes sure image scales nicely without distortion */
-  display: block;          /* ensures proper centering */
-  margin: 0 auto;          /* centers image horizontally */
+  width: 100%;             
+  height: 350px;          
+  object-fit: cover;       
+  display: block;        
+  margin: 0 auto;          
   transition: transform 0.4s ease, filter 0.4s ease;
 }
 
@@ -417,7 +418,7 @@ h2.section-title::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  justify-content: center; /* center grid horizontally */
+  justify-content: center; 
 }
 
 .achievement-item {
@@ -514,6 +515,46 @@ footer {
   .contact-column iframe {
     width: 100%;
   }
+.profile-container {
+  width: 250px;          
+  position: relative;
+ 
+  margin-right: 15%;
+  margin-bottom: -30%;
+}
+
+.profile-container .profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--accent-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: float 4s ease-in-out infinite;
+  display: block;
+  margin: 0 auto;      
+}
+.hero-text {
+  position: relative;
+  top: -80px; 
+}
+/* Floating logos around the profile */
+.floating-logos {
+  position: absolute;
+  top: 70%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 250px;        
+  height: 250px;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+
 }
 
 
@@ -522,8 +563,18 @@ footer {
     flex-direction: column-reverse;
     text-align: center;
     padding: 40px;
+    
   }
 
+  body{
+        padding-top: 80px;
+  }
+
+  .navbar{
+    position: fixed;
+     z-index: 9999;
+  }
+  
  .profile-container .profile-img {
   width: 250px; 
   height: 250px; 
@@ -566,7 +617,10 @@ footer {
     height: 250px;
     margin-bottom: 20px;
   }
-  
+  .nav-link {
+  font-size: 12px; 
+  line-height: 1.5; 
+}
   nav .navbar-nav {
     flex-direction: column;
     align-items: center;
@@ -584,11 +638,13 @@ footer {
   }
 
   .nav-link.contact-link {
-  margin: 5px auto;
+  display: flex;             /* use flex to center content */
+  justify-content: center;   /* horizontal centering */
+  align-items: center;       /* vertical centering if needed */
   width: 50%;
-  text-align: center;
+  margin: 5px auto;          /* center the block horizontally */
   padding: 8px;
-  display: block;
+  text-align: center;
 }
 
   .navbar-toggler {
@@ -600,7 +656,8 @@ footer {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 124, 182, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
 
-  
+
+
 }
 
 
